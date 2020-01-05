@@ -38,5 +38,8 @@ coders                     52    0     0
 
 ## Tips 
 
-If you're using ZSH, try running `ruby /usr/local/share/kount/main.rb dir/*`, then, hit tab to list lines of code in multiple directories
-(ZSH will automatically convert wildcard character into multiple distinct names)
+If you're using ZSH or another shell which provides wildcard character extension, don't hesitate to run commands like: 
+- `ruby /usr/local/share/kount/main.rb dir/*` : count all lines in all sub-directories of dir (non-recursively) 
+- `ruby /usr/local/share/kount/main.rb dir/**` : count all lines in all sub-directories of dir (recursively) 
+- `ruby /usr/local/share/kount/main.rb dir/**/*` : count all lines in all sub-directories and sub-files of dir (recursively) 
+
