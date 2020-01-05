@@ -4,16 +4,17 @@ Count number of lines of code in directories
 
 ## Installation 
 
-``` 
-cd /usr/local/share/
-git clone https://github.com/aclarembeau/kount/
+Run the following 
 ```
+wget https://raw.githubusercontent.com/aclarembeau/kount/master/main.rb -O /usr/local/bin/kount ; chmod +x /usr/local/bin/kount
+```
+
 
 ## Usage 
 
-`ruby /usr/local/share/kount/main.rb dir` : count number of lines of code in directory "dir"
+`kount dir` : count number of lines of code in directory "dir"
 
-`ruby /usr/local/share/kount/main.rb dir1 dir2` : count number of lines of code in directories dir1 and dir2 
+`kount dir1 dir2` : count number of lines of code in directories dir1 and dir2 
 
 ## Sample output 
 
@@ -39,7 +40,7 @@ coders                     52    0     0
 ## Tips 
 
 If you're using ZSH or another shell which provides wildcard character extension, don't hesitate to run commands like: 
-- `ruby /usr/local/share/kount/main.rb dir/*` : count all lines in all sub-directories of dir (non-recursively) 
-- `ruby /usr/local/share/kount/main.rb dir/**` : count all lines in all sub-directories of dir (recursively) 
-- `ruby /usr/local/share/kount/main.rb dir/**/*` : count all lines in all sub-directories and sub-files of dir (recursively) 
+- `kount dir/*` : count all lines in all sub-directories of dir (non-recursively) 
+- `kount dir/**` : count all lines in all sub-directories of dir (recursively) 
+- `kount dir/**/*` : count all lines in all sub-directories and sub-files of dir (recursively) 
 
