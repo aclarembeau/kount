@@ -15,7 +15,7 @@ end
 scanned_dirs.each do |dirname|
   local_result = { 'total' => 0 }
 
-  file_names = Dir[dirname + '/**/*']
+  file_names = File.directory?(dirname) ? Dir[dirname + '/**/*'] : [dirname]
 
   file_names.each do |file_name|
     extension = file_name.split('.').last
