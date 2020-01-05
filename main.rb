@@ -1,3 +1,11 @@
+#!/usr/bin/env ruby
+#coding:utf-8
+
+if ARGV.length == 0 
+	puts("You must provide some file names to the command")
+	exit(1) 
+end 
+
 scanned_dirs = ARGV.flatten
 COLUMN_SIZE = 5
 
@@ -6,7 +14,9 @@ aggregated_result = {}
 
 def pad(string, pad_size)
   string = string.to_s
-  padding = ' ' * (pad_size - string.length)
+  remaining_space = pad_size - string.length 
+  remaining_space = 0 if remaining_space < 0 
+  padding = ' ' * remaining_space
   string + padding
 end
 
