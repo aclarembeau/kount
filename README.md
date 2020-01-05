@@ -12,6 +12,7 @@ git clone https://github.com/aclarembeau/kount/
 ## Usage 
 
 `ruby /usr/local/share/kount/main.rb dir` : count number of lines of code in directory "dir"
+
 `ruby /usr/local/share/kount/main.rb dir1 dir2` : count number of lines of code in directories dir1 and dir2 
 
 ## Sample output 
